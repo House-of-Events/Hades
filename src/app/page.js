@@ -3,7 +3,7 @@ import Image from 'next/image';
 
 export default function Main() {
   return (
-    <div className="container mx-auto pt-top-xl">
+    <div className="">
       <HomePage />
     </div>
   );
