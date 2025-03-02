@@ -1,5 +1,6 @@
 /** @type {import('next').NextConfig} */
 console.log('Loaded NODE_ENV:', process.env.APP_ENV);
+
 const nextConfig = {
   serverExternalPackages: ['knex', 'pg'],
   webpack: (config) => {
@@ -13,6 +14,9 @@ const nextConfig = {
       'tedious',
     ];
     return config;
+  },
+  images: {
+    domains: ['i.pinimg.com'], // Add this line
   },
 };
 
