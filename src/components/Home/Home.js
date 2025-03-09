@@ -171,29 +171,18 @@ const HomePage = () => {
           <div className="max-w-6xl mx-auto">
             <div className="grid grid-cols-1 md:grid-cols-12 gap-12">
               {/* Image Column */}
-              <div className="md:col-span-5 flex justify-center flex flex-col">
-                <div className="relative w-full max-w-md h-72 md:h-96 rounded-2xl overflow-hidden shadow-2xl transform -rotate-2 hover:rotate-0 transition-all duration-500">
-                  <Image
-                    src="https://i.pinimg.com/474x/5f/9c/fb/5f9cfb5435cc38b42750e5859be6c7eb.jpg"
-                    alt="Events"
-                    layout="fill"
-                    objectFit="cover"
-                    className="transform transition-transform duration-700 hover:scale-110"
-                  />
-                  <div className="absolute inset-0 bg-gradient-to-t from-indigo-900/60 to-transparent"></div>
-                </div>
-                <div className="relative w-full max-w-md h-72 md:h-96 rounded-2xl overflow-hidden shadow-2xl transform -rotate-4 hover:rotate-2 transition-all duration-500">
-                  <Image
-                    src="https://i.pinimg.com/474x/47/06/37/47063765bf229b2f6e4bdd5037fcb70a.jpg"
-                    alt="Events"
-                    layout="fill"
-                    objectFit="cover"
-                    className="transform transition-transform duration-700 hover:scale-110"
-                  />
-                  <div className="absolute inset-0 bg-gradient-to-t from-indigo-900/60 to-transparent"></div>
+              <div className="md:col-span-5">
+                <div className="bg-[#F7F8F8] p-[2rem] rounded-lg w-full">
+                  <div className="relative h-[500px] w-full">
+                    <Image
+                      src="/images/image.png"
+                      alt="Events"
+                      layout="fill"
+                      objectFit="cover"
+                    />
+                  </div>
                 </div>
               </div>
-
               {/* Content Column */}
               <div className="md:col-span-7">
                 <div className="flex items-center mb-6">
