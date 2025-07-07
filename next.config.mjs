@@ -2,19 +2,6 @@
 console.log('Loaded NODE_ENV:', process.env.APP_ENV);
 
 const nextConfig = {
-  serverExternalPackages: ['knex', 'pg'],
-  webpack: (config) => {
-    config.externals = [
-      ...(config.externals || []),
-      'better-sqlite3',
-      'mysql2',
-      'oracledb',
-      'pg-query-stream',
-      'sqlite3',
-      'tedious',
-    ];
-    return config;
-  },
   images: {
     domains: ['i.pinimg.com'], // Add this line
   },
