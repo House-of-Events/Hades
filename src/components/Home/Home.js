@@ -215,7 +215,7 @@ const HomePage = () => {
                     you to subscribe to specialized event channels from across
                     the globe, ensuring you never miss a moment of what you love
                     most. Whether you're passionate about sports, concerts,
-                    conferences, or cultural festivities, we've got you covered.
+                    conferences, or cultural festivities, we've got you covered!
                   </p>
 
                   <p className="text-l text-gray-800 leading-relaxed">
