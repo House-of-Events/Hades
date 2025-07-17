@@ -163,7 +163,20 @@ const HomePage = () => {
           </div>
         </div>
 
-        <div className="bg-black h-[40rem]"></div>
+        <div className="bg-black h-[40rem] flex items-center justify-center">
+          <div className="w-full h-full">
+            <iframe
+              width="100%"
+              height="100%"
+              src="https://www.youtube.com/embed/taxldmY8V-Y?si=veiub6rj82vsyxUO"
+              title="House of Events Video"
+              frameBorder="0"
+              allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
+              allowFullScreen
+              className="rounded-lg"
+            ></iframe>
+          </div>
+        </div>
 
         {/* About us */}
 
