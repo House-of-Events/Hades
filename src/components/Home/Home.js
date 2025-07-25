@@ -4,6 +4,7 @@ import Image from 'next/image';
 
 import { useState, useEffect } from 'react';
 import axios from 'axios';
+import Navbar from '../Navbar/Navbar';
 
 const api_url = process.env.NEXT_PUBLIC_API_URL || 'http://localhost:3002';
 
@@ -107,63 +108,22 @@ const HomePage = () => {
   };
 
   return (
-    <div className="py-12 px-4 sm:px-6 lg:px-8 ">
+    <div className="">
+            <Navbar />
+
       <div className="max-w-6xl mx-auto">
-        <div className="mb-10 mt-[7rem] text-center">
-          <p> Product </p>
-          <h3 className="text-2xl mb-4 title-header font-montserrat ">
+        
+        <div className="pb-[50px] mt-[7rem]">
+          <h3 className="text-2xl mb-4 title-header font-montserrat font-black ">
             House of Events{' '}
           </h3>
-          <p className="title-text font-montserrat ">
+          <p className="title-text font-montserrat opacity-70 text-[20px]">
             Start subscribing to event channels from around the world - do not
             ever miss out on a sports game!
           </p>
-
-          {/* Buttons  */}
-          <div className="flex flex-col sm:flex-row gap-4 items-center mt-8 justify-center">
-            <Link
-              href="/account"
-              className="inline-flex items-center justify-center px-6 py-3 text-base font-medium text-white bg-indigo-600 rounded-md shadow-sm hover:bg-indigo-700 transition duration-300 ease-in-out w-full sm:w-auto"
-            >
-              Create Account
-              <svg
-                className="ml-2 -mr-1 w-5 h-5"
-                xmlns="http://www.w3.org/2000/svg"
-                viewBox="0 0 20 20"
-                fill="currentColor"
-                aria-hidden="true"
-              >
-                <path
-                  fillRule="evenodd"
-                  d="M10.293 5.293a1 1 0 011.414 0l4 4a1 1 0 010 1.414l-4 4a1 1 0 01-1.414-1.414L12.586 11H5a1 1 0 110-2h7.586l-2.293-2.293a1 1 0 010-1.414z"
-                  clipRule="evenodd"
-                />
-              </svg>
-            </Link>
-
-            <Link
-              href="/account"
-              className="inline-flex items-center justify-center px-6 py-3 text-base font-medium text-indigo-700 bg-white border border-indigo-300 rounded-md shadow-sm hover:bg-gray-50 transition duration-300 ease-in-out w-full sm:w-auto"
-            >
-              Get API
-              <svg
-                className="ml-2 -mr-1 w-5 h-5"
-                xmlns="http://www.w3.org/2000/svg"
-                viewBox="0 0 20 20"
-                fill="currentColor"
-                aria-hidden="true"
-              >
-                <path
-                  fillRule="evenodd"
-                  d="M10.293 5.293a1 1 0 011.414 0l4 4a1 1 0 010 1.414l-4 4a1 1 0 01-1.414-1.414L12.586 11H5a1 1 0 110-2h7.586l-2.293-2.293a1 1 0 010-1.414z"
-                  clipRule="evenodd"
-                />
-              </svg>
-            </Link>
-          </div>
         </div>
 
-        <div className="bg-black h-[40rem] flex items-center justify-center">
+        <div className="bg-black h-[40rem] flex items-center justify-center mt-[100px]">
           <div className="w-full h-full">
             <iframe
               width="100%"
@@ -185,10 +145,10 @@ const HomePage = () => {
             <div className="grid grid-cols-1 md:grid-cols-12 gap-12">
               {/* Image Column */}
               <div className="md:col-span-5">
-                <div className="bg-[#F7F8F8] p-[2rem] rounded-lg w-full">
+                <div className="p-[2rem] rounded-lg w-full">
                   <div className="relative h-[500px] w-full">
                     <Image
-                      src="/images/image.png"
+                      src="https://i.pinimg.com/1200x/28/a5/2d/28a52d06f1ad2fa38cac49555ee21926.jpg"
                       alt="Events"
                       layout="fill"
                       objectFit="cover"
@@ -200,7 +160,7 @@ const HomePage = () => {
               <div className="md:col-span-7">
                 <div className="flex items-center mb-6">
                   <div className="h-1 w-12 bg-background mr-4"></div>
-                  <h2 className="text-3xl font-extrabold text-indigo-900 tracking-tight">
+                  <h2 className="text-3xl font-extrabold tracking-tight">
                     About{' '}
                     <span className="text-transparent bg-clip-text bg-gradient-to-r text-background">
                       House of Events
@@ -239,62 +199,8 @@ const HomePage = () => {
                   </p>
                 </div>
 
-                {/* CTA Buttons */}
-                <div className="mt-10 flex flex-col sm:flex-row gap-4">
-                  <a
-                    href="/channels"
-                    className="inline-flex items-center justify-center px-8 py-4 text-base font-medium text-white bg-gradient-to-r from-gray-800 to-gray-600 rounded-xl shadow-lg hover:shadow-black/30 transition duration-300 ease-in-out transform hover:-translate-y-1 border border-gray-600"
-                  >
-                    Discover Channels
-                    <svg
-                      className="ml-2 w-5 h-5"
-                      xmlns="http://www.w3.org/2000/svg"
-                      viewBox="0 0 20 20"
-                      fill="currentColor"
-                    >
-                      <path
-                        fillRule="evenodd"
-                        d="M10.293 5.293a1 1 0 011.414 0l4 4a1 1 0 010 1.414l-4 4a1 1 0 01-1.414-1.414L12.586 11H5a1 1 0 110-2h7.586l-2.293-2.293a1 1 0 010-1.414z"
-                        clipRule="evenodd"
-                      />
-                    </svg>
-                  </a>
 
-                  <a
-                    href="/create-channel"
-                    className="inline-flex items-center justify-center px-8 py-4 text-base font-medium text-indigo-700 bg-white border border-indigo-200 rounded-xl shadow-md hover:bg-indigo-50 transition duration-300 ease-in-out transform hover:-translate-y-1"
-                  >
-                    Request a new channel
-                    <svg
-                      className="ml-2 w-5 h-5"
-                      xmlns="http://www.w3.org/2000/svg"
-                      viewBox="0 0 20 20"
-                      fill="currentColor"
-                    >
-                      <path
-                        fillRule="evenodd"
-                        d="M10 3a1 1 0 011 1v5h5a1 1 0 110 2h-5v5a1 1 0 11-2 0v-5H4a1 1 0 110-2h5V4a1 1 0 011-1z"
-                        clipRule="evenodd"
-                      />
-                    </svg>
-                  </a>
-                </div>
-
-                {/* Feature Tags */}
-                <div className="mt-10 flex flex-wrap gap-3">
-                  <span className="px-4 py-2 bg-white bg-opacity-70 backdrop-blur-sm text-indigo-800 rounded-full text-sm font-medium shadow-sm">
-                    ✨ Global Events
-                  </span>
-                  <span className="px-4 py-2 bg-white bg-opacity-70 backdrop-blur-sm text-indigo-800 rounded-full text-sm font-medium shadow-sm">
-                    🔔 Real-time Alerts
-                  </span>
-                  <span className="px-4 py-2 bg-white bg-opacity-70 backdrop-blur-sm text-indigo-800 rounded-full text-sm font-medium shadow-sm">
-                    🏆 Sports Coverage
-                  </span>
-                  <span className="px-4 py-2 bg-white bg-opacity-70 backdrop-blur-sm text-indigo-800 rounded-full text-sm font-medium shadow-sm">
-                    👨‍👩‍👧‍👦 Community
-                  </span>
-                </div>
+               
               </div>
             </div>
           </div>
@@ -514,7 +420,7 @@ const HomePage = () => {
             </div>
           </form>
 
-          <div className="mt-6 text-center text-sm text-gray-500">
+          <div className="mt-6 text-center text-sm text-gray-500 mb-[100px]">
             <p>
               Need an API key? Contact our support team for assistance or create
               an account
