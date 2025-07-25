@@ -3,7 +3,13 @@ console.log('Loaded NODE_ENV:', process.env.APP_ENV);
 
 const nextConfig = {
   images: {
-    domains: ['i.pinimg.com'], // Add this line
+    domains: [
+      'i.pinimg.com',
+      'in.pinterest.com',
+      'images.unsplash.com',
+      'picsum.photos',
+      'via.placeholder.com'
+    ],
   },
 };
 
