@@ -1,6 +1,7 @@
 @import url('https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,100..900;1,100..900&display=swap');
 
-html, body {
+html,
+body {
   overscroll-behavior: none;
 }
 
@@ -55,4 +56,26 @@ html, body {
     calc(3.5rem + 0.6 * ((100vw - 48rem) / 80)),
     4.1rem
   );
+}
+
+/* Scroll Animation Classes */
+.animate-fade-in {
+  opacity: 1 !important;
+  transform: translateY(0) !important;
+}
+
+.scroll-section {
+  opacity: 0;
+  transform: translateY(20px);
+  transition: all 0.8s ease-out;
+}
+
+.scroll-section.animate-fade-in {
+  opacity: 1;
+  transform: translateY(0);
+}
+
+/* Smooth scrolling for the entire page */
+html {
+  scroll-behavior: smooth;
 }

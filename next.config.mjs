@@ -8,7 +8,7 @@ const nextConfig = {
       'in.pinterest.com',
       'images.unsplash.com',
       'picsum.photos',
-      'via.placeholder.com'
+      'via.placeholder.com',
     ],
   },
 };
